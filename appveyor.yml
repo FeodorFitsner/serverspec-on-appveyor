@@ -19,7 +19,7 @@ cache:
   - vendor/bundle
 
 install:
-  - $env:PSModulePath
+  - ps: $env:PSModulePath
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - bundle config --local path vendor/bundle
   - bundle install
