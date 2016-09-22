@@ -21,7 +21,7 @@ cache:
 install:
   - ps: $env:PSModulePath
   - ps: $env:PSModulePath = 'C:\Users\appveyor\Documents\WindowsPowerShell\Modules;C:\Users\appveyor\Documents\WindowsPowerShell\Modules;'
-  - ps: [Environment]::SetEnvironmentVariable("PSModulePath", 'C:\Users\appveyor\Documents\WindowsPowerShell\Modules', "Machine")
+  - ps: '[Environment]::SetEnvironmentVariable("PSModulePath", "C:\Users\appveyor\Documents\WindowsPowerShell\Modules", "Machine")'
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - bundle config --local path vendor/bundle
   - bundle install
